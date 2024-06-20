@@ -83,7 +83,7 @@ export default function Login({ navigation }) {
             </Text>
             <View style={styles.inputContainer}>
               <TextInput
-                style={[styles.textInput, text ? styles.textInputNotEmpty : styles.textInputEmpty]}
+                style={[styles.textInput, styles.textInputCentered]}
                 placeholder='Isi Nama Lengkap'
                 placeholderTextColor='gray'
                 onChangeText={setText}
@@ -156,12 +156,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: 'black',
     backgroundColor: 'white',
+    textAlign: 'center', // Center text
   },
-  textInputEmpty: {
-    textAlign: 'center', // Center the placeholder
-  },
-  textInputNotEmpty: {
-    textAlign: 'left', // Align text to the left when typing
+  textInputCentered: {
+    textAlign: 'center', // Center text even when typing
   },
   button: {
     padding: 10,
