@@ -34,7 +34,9 @@ export default function Pendoman({navigation}) {
          <View style={{padding:10, }}>
 
             {/* NANTI DISINI AKAN ADA HASIL DARI PEDOMAN */}
-            <Text>Belum ada hasil...</Text>
+           <Image source={require('../../assets/pedomanteks.png')} style={{
+            width:321, height:975
+           }}/>
          </View>
       
     </View>
