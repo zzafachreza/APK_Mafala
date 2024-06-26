@@ -25,18 +25,16 @@ export default function Login({ navigation }) {
   const img = new Animated.Value(-20);
 
   const masuk = () => {
-    if (kirim.telepon == null && kirim.password == null) {
-      Alert.alert(MYAPP, 'telepon dan Password tidak boleh kosong !');
-    } else if (kirim.telepon == null) {
-      Alert.alert(MYAPP, 'telepon tidak boleh kosong !');
-    } else if (kirim.password == null) {
-      Alert.alert(MYAPP, 'Password tidak boleh kosong !');
+    if (text.length == 0) {
+      Alert.alert(MYAPP, 'Nama lengkap tidak boleh kosong !');
     } else {
       setLoading(true);
       console.log(kirim);
 
       axios
-        .post(apiURL + 'login', kirim)
+        .post(apiURL + 'login', {
+          nama_lengkap: text
+        })
         .then(res => {
           setLoading(false);
           console.log(res.data);
@@ -83,6 +81,7 @@ export default function Login({ navigation }) {
             </Text>
             <View style={styles.inputContainer}>
               <TextInput
+
                 style={[styles.textInput, styles.textInputCentered]}
                 placeholder='Isi Nama Lengkap'
                 placeholderTextColor='gray'
@@ -90,7 +89,7 @@ export default function Login({ navigation }) {
                 value={text}
               />
             </View>
-            <TouchableNativeFeedback onPress={() => navigation.navigate('MainApp')}>
+            <TouchableNativeFeedback onPress={masuk}>
               <View style={styles.button}>
                 <Text style={styles.buttonText}>Masuk</Text>
               </View>

@@ -10,7 +10,7 @@ import {
 import { Icon } from 'react-native-elements';
 import { colors } from '../../utils/colors';
 import { useState } from 'react';
-import { getData, urlAPI } from '../../utils/localStorage';
+import { getData, storeData, urlAPI } from '../../utils/localStorage';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useIsFocused } from '@react-navigation/native';
@@ -43,8 +43,16 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
     return null;
   }
 
+
+  const keluar = () => {
+    storeData('user', null)
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Splash' }],
+    })
+  }
   return (
-    <View style={{ backgroundColor: colors.secondary, flexDirection: 'row',  borderTopLeftRadius:20, borderTopRightRadius:20, marginTop:-50}}>
+    <View style={{ backgroundColor: colors.secondary, flexDirection: 'row', borderTopLeftRadius: 20, borderTopRightRadius: 20, marginTop: -50 }}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -86,7 +94,7 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
         } else if (label === 'History') {
           iconName = 'newspaper-outline';
           Newlabel = '';
-        }  else if (label === 'Account') {
+        } else if (label === 'Account') {
           iconName = 'log-out-outline';
           Newlabel = '';
         }
@@ -99,11 +107,9 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
             onPress={
-              label === 'Kategori'
-                ? () =>
-                  navigation.navigate('Barang', {
-                    key: 0
-                  })
+              label === 'Account'
+                ? keluar
+
                 : onPress
             }
             onLongPress={onLongPress}
@@ -127,7 +133,7 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
                   justifyContent: 'center',
                   alignItems: 'center',
                   position: 'relative',
-                
+
                 }}>
                 {/* {label == 'Cart' && <Text style={{
                   position: 'absolute', top: 0, right: 20, bottom: 0, backgroundColor: colors.white, width: 15,
@@ -146,7 +152,7 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
                   style={{
                     fontSize: MyDimensi / 5,
                     color: isFocused ? colors.black : "#dededede",
-                    fontFamily:fonts.primary[600]
+                    fontFamily: fonts.primary[600]
                   }}>
                   {Newlabel}
                 </Text>

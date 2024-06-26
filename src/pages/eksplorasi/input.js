@@ -1,11 +1,14 @@
 import { View, Text, ImageBackground, ScrollView, Image, TouchableNativeFeedback, TextInput, StyleSheet } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import { MyGap, MyHeader } from '../../components';
 import { MyDimensi, colors, fonts } from '../../utils';
 import { MYAPP } from '../../utils/localStorage';
 import { Icon } from 'react-native-elements';
+import { apiURL, getData } from '../../utils/localStorage'
+import axios from 'axios'
+import { showMessage } from 'react-native-flash-message'
 
-export default function EksplorasiInput({navigation}) {
+export default function EksplorasiInput({ navigation }) {
     const backPage = () => {
         navigation.goBack();
     };
@@ -14,6 +17,64 @@ export default function EksplorasiInput({navigation}) {
         <Text style={[style, styles.justifiedText]}>{children}</Text>
     );
 
+
+    const [kirim, setKirim] = useState({
+        tipe: 'eksplorasi',
+        orientasi_diksi: '',
+        orientasi_imaji: '',
+        orientasi_rima: '',
+        orientasi_tipografi: '',
+        orientasi_gaya_bahasa: '',
+        orientasi_tema: '',
+        orientasi_rasa: '',
+        orientasi_nada: '',
+        orientasi_amanat: '',
+        jelajahi_terjemah_indonesia: '',
+        jelajahi_tema: '',
+        jelajahi_gaya_bahasa: '',
+        jelajahi_pesan_moral: '',
+        eksplorasi_nama_kelompok: '',
+        eksplorasi_anggota_kelompok: '',
+        kotak1: '',
+        kotak2: '',
+        kotak3: '',
+        kotak4: '',
+        jumlah_makan: '',
+        tantangan_1a: '',
+        tantangan_1b: '',
+        tantangan_2a: '',
+        tantangan_2b: '',
+        tantangan_3a: '',
+        tantangan_3b: '',
+        tantangan_3c: '',
+        tantangan_3d: '',
+        tantangan_3e: '',
+        tantangan_3f: '',
+        tantangan_3g: '',
+        tantangan_3h: '',
+        tantangan_4: '',
+
+    })
+    const sendServer = () => {
+        getData('user').then(u => {
+            let dt = {
+                ...kirim,
+                nama_lengkap: u.nama_lengkap
+            }
+
+            axios.post(apiURL + 'update_riwayat', dt).then(res => {
+                console.log(res.data);
+                if (res.data == 200) {
+                    showMessage({
+                        type: 'success',
+                        message: 'Data berhasil disimpan'
+                    });
+                    navigation.navigate('Komunikasi')
+                }
+            })
+        })
+
+    }
     return (
         <ImageBackground source={require('../../assets/bghome.png')} style={{
             flex: 1,
@@ -43,7 +104,7 @@ export default function EksplorasiInput({navigation}) {
                     <View style={{ marginTop: 20 }}>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>Kelompok:</JustifiedText>
                         <MyGap jarak={5} />
-                        <TextInput style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, eksplorasi_nama_kelompok: x })} style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
                             placeholder='Isi Kelompok' placeholderTextColor='gray'
                         />
                     </View>
@@ -51,17 +112,17 @@ export default function EksplorasiInput({navigation}) {
                     <View style={{ marginTop: 10 }}>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>Nama Anggota Kelompok:</JustifiedText>
                         <MyGap jarak={5} />
-                        <TextInput style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
-                            placeholder='Isi Nama Anggota Kelompok' placeholderTextColor='gray'
+                        <TextInput onChangeText={x => setKirim({ ...kirim, eksplorasi_anggota_kelompok: x })} style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
+                            placeholder='Isi Nama Anggota Kelompok' multiline placeholderTextColor='gray'
                         />
                     </View>
                     <MyGap jarak={10} />
 
-                    <TouchableNativeFeedback>
+                    {/* <TouchableNativeFeedback>
                         <View style={{ padding: 10, backgroundColor: '#D9D9D9', borderRadius: 30 }}>
                             <Text style={{ fontFamily: fonts.primary[600], textAlign: 'center', color: '#989898' }}>Tambah</Text>
                         </View>
-                    </TouchableNativeFeedback>
+                    </TouchableNativeFeedback> */}
 
                     <MyGap jarak={20} />
 
@@ -109,7 +170,7 @@ export default function EksplorasiInput({navigation}) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 1</Text>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak1: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Terjemahkan' placeholderTextColor='gray' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
@@ -122,7 +183,7 @@ export default function EksplorasiInput({navigation}) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 2</Text>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak2: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Tema' placeholderTextColor='gray' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
@@ -135,7 +196,7 @@ export default function EksplorasiInput({navigation}) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 3</Text>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak3: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Gaya Bahasa' placeholderTextColor='gray' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
@@ -148,7 +209,7 @@ export default function EksplorasiInput({navigation}) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 4</Text>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak4: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Pesan' placeholderTextColor='gray' />
                     </View>
 
@@ -170,14 +231,14 @@ export default function EksplorasiInput({navigation}) {
                             a. Isilah kotak dibawah ini dengan terjemahan {'\n'}<Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada kotak 1
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_1a: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             b. Ciptakanlah sepenggal kalimat imajinatif yang memiliki bentuk dan jumlah larik seperti terjemahan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada kotak sebelumnya. Tulislah kalimat imajinatif tersebut pada kotak di bawah ini.
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_1b: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                     </View>
 
@@ -189,14 +250,14 @@ export default function EksplorasiInput({navigation}) {
                             a. Isilah kotak dibawah ini dengan tema <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada kotak 2.
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_2a: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             b. Ciptakanlah sebuah judul yang menggambarkan tema yang terdapat pada kotak sebelumnya.
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_2b: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                     </View>
 
@@ -224,7 +285,7 @@ export default function EksplorasiInput({navigation}) {
                                 Dolabololo :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3a: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -235,7 +296,7 @@ export default function EksplorasiInput({navigation}) {
                                 Tema :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3b: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -246,7 +307,7 @@ export default function EksplorasiInput({navigation}) {
                                 Judul :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3c: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -257,7 +318,7 @@ export default function EksplorasiInput({navigation}) {
                                 Kalimat Imajinatif :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3d: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -268,7 +329,7 @@ export default function EksplorasiInput({navigation}) {
                                 Gaya Bahasa :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3e: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -279,7 +340,7 @@ export default function EksplorasiInput({navigation}) {
                                 Kalimat Imajinatif :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3f: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -290,7 +351,7 @@ export default function EksplorasiInput({navigation}) {
                                 Pesan :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3g: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -301,7 +362,7 @@ export default function EksplorasiInput({navigation}) {
                                 Kalimat Imajinatif :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3h: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -320,14 +381,14 @@ export default function EksplorasiInput({navigation}) {
                         <View>
                             <Text style={{ fontSize: 12, fontFamily: fonts.primary[600] }}>Puisi:</Text>
                             <MyGap jarak={10} />
-                            <TextInput style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, borderWidth: 1, borderRadius: 10, fontSize: 12, fontFamily: fonts.primary[400] }}
+                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_4: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, borderWidth: 1, borderRadius: 10, fontSize: 12, fontFamily: fonts.primary[400] }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
                     </View>
 
                     <View style={{ padding: 10 }}>
                     </View>
-                    <TouchableNativeFeedback onPress={() => navigation.navigate('Komunikasi')}>
+                    <TouchableNativeFeedback onPress={sendServer}>
                         <View style={{ padding: 10, backgroundColor: colors.tertiary, borderRadius: 30 }}>
                             <Text style={{ fontFamily: fonts.primary[600], textAlign: 'center', color: 'white' }}>Selanjutnya</Text>
                         </View>
