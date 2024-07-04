@@ -267,7 +267,7 @@ export default function EksplorasiInput({ navigation }) {
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>3.Mari merakit puisi!</Text>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            Rakitlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diidentifikasi sebelumnya dan ikutilah instruksi yang diberikan oleh guru. Gunakanlah kotak untuk merakit puisi bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang terdapat pada halaman berikutnya.
+                            Rakitlah sebuah puisi dengan memanfaatkan unsur - unsur pembangun yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diidentifikasi sebelumnya dan ikutilah instruksi yang diberikan oleh guru. Gunakanlah kotak untuk merakit puisi bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang terdapat pada halaman berikutnya.
                         </JustifiedText>
                     </View>
 
@@ -275,14 +275,14 @@ export default function EksplorasiInput({ navigation }) {
 
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12, textAlign: 'center' }}>Kotak Merakit Puisi yang Bermuatan{'\n'}
-                            <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>
+                            <Text style={{ fontStyle: 'italic' }}>Dolabololo</Text>
                         </Text>
 
                         <MyGap jarak={20} />
 
                         <View>
                             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12, fontStyle: "italic" }}>
-                                <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> :
+                                <Text style={{ fontStyle: 'italic' }}>Dolabololo</Text> :
                             </JustifiedText>
                             <MyGap jarak={5} />
                             <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3a: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}

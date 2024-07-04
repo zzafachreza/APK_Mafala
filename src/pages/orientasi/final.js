@@ -45,7 +45,7 @@ export default function OrientasiFinal({ navigation }) {
                         </JustifiedText>
                         <MyGap jarak={5} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> adalah sastra lisan Ternate yang berbentuk peribahasa atau ungkapan Tradisional. Penggunaan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dalam berinteraksi dimaksudkan agar menyadarkan dan meluluhkan hati orang yang mendengar, bahkan pesan yang di dalamnya dapat meredakan amarah, serta membangkitkan semangat.
+                            <Text style={{ fontStyle: 'italic' }}>Dolabololo</Text> adalah sastra lisan Ternate yang berbentuk peribahasa atau ungkapan Tradisional. Penggunaan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dalam berinteraksi dimaksudkan agar menyadarkan dan meluluhkan hati orang yang mendengar, bahkan pesan yang di dalamnya dapat meredakan amarah, serta membangkitkan semangat.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>
@@ -53,7 +53,7 @@ export default function OrientasiFinal({ navigation }) {
                         </JustifiedText>
                         <MyGap jarak={5} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> merupakan bagian integral dari kebudayaan lokal yang menjadi warisan adat, kebiasaan, nilai dan identitas masyarakat Maluku Utara. Sastra lisan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> memiliki fungsi yang dapat direvitalisasi untuk mengantisipasi dampak negatif dari perubahan masyarakat modern Ternate.
+                            <Text style={{ fontStyle: 'italic' }}>Dolabololo</Text> merupakan bagian integral dari kebudayaan lokal yang menjadi warisan adat, kebiasaan, nilai dan identitas masyarakat Maluku Utara. Sastra lisan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> memiliki fungsi yang dapat direvitalisasi untuk mengantisipasi dampak negatif dari perubahan masyarakat modern Ternate.
                         </JustifiedText>
                     </View>
                     <MyGap jarak={10} />

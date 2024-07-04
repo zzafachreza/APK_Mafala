@@ -55,7 +55,7 @@ export default function Jelajahi({ navigation }) {
                         </JustifiedText>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             3. Masing-masing anggota kelompok diberikan waktu untuk :{'\n'}
-                            • saling melisankan bentuk dolabolo yang terdapat dalam kartu yang telah mereka miliki masing-masing.{'\n'}
+                            • saling melisankan bentuk <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>  yang terdapat dalam kartu yang telah mereka miliki masing-masing.{'\n'}
                             • mengartikan bentuk <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang terdapat dalam kartu ke dalam bahasa Indonesia.
                         </JustifiedText>
                         <MyGap jarak={10} />
@@ -63,7 +63,8 @@ export default function Jelajahi({ navigation }) {
                             Contoh:
                         </JustifiedText>
                         <Image source={require('../../assets/langkahteks.png')} style={{
-                            width: 307, height: 192
+                            width: '100%', height: 220,
+                            resizeMode: 'contain'
                         }} />
                         <MyGap jarak={20} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
@@ -74,7 +75,8 @@ export default function Jelajahi({ navigation }) {
                             Contoh:
                         </JustifiedText>
                         <Image source={require('../../assets/langkahteksdua.png')} style={{
-                            width: 302, height: 474
+                            width: '100%', height: 550,
+                            resizeMode: 'contain'
                         }} />
                     </View>
 
