@@ -4,7 +4,7 @@ import { MyGap, MyHeader } from '../../components';
 import { MyDimensi, colors, fonts } from '../../utils';
 import { Icon } from 'react-native-elements';
 
-export default function Orientasi({navigation}) {
+export default function Orientasi({ navigation }) {
   const backPage = () => {
     navigation.goBack();
   };
@@ -33,7 +33,7 @@ export default function Orientasi({navigation}) {
         <View style={{ padding: 10 }}>
 
           <View style={{ padding: 10 }}>
-            <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Tahap Orientasi: Mengenal Puisi dan <Text style={{ fontStyle: 'italic' }}>Dolabololo</Text> </Text>
+            <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Tahap Orientasi: Mengenal Puisi dan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> </Text>
             <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>• Apa itu puisi ?</Text>
             <View>
               <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 10 }}>

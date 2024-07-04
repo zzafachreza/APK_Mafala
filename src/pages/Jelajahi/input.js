@@ -107,7 +107,7 @@ export default function JelajahiInput({ navigation, route }) {
                         <View>
                             <Text style={{ fontFamily: fonts.primary[400], fontSize: 12, }}> 1. Terjemah Bahasa Indonesia</Text>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, jelajahi_terjemah_indonesia: x })} style={{
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, jelajahi_terjemah_indonesia: x })} style={{
                                 fontFamily: fonts.primary[400], fontSize: 12, paddingLeft: 10, paddingRight: 10, borderWidth: 1,
                                 borderRadius: 30, color: 'black', backgroundColor: 'white'
                             }} placeholder='Isi Jawaban' placeholderTextColor='gray' />
@@ -116,7 +116,7 @@ export default function JelajahiInput({ navigation, route }) {
                         <View>
                             <Text style={{ fontFamily: fonts.primary[400], fontSize: 12, }}> 2. Tema</Text>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, jelajahi_tema: x })} style={{
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, jelajahi_tema: x })} style={{
                                 fontFamily: fonts.primary[400], fontSize: 12, paddingLeft: 10, paddingRight: 10, borderWidth: 1,
                                 borderRadius: 30, color: 'black', backgroundColor: 'white'
                             }} placeholder='Isi Jawaban' placeholderTextColor='gray' />
@@ -125,7 +125,7 @@ export default function JelajahiInput({ navigation, route }) {
                         <View>
                             <Text style={{ fontFamily: fonts.primary[400], fontSize: 12, }}> 3. Gaya Bahasa</Text>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, jelajahi_gaya_bahasa: x })} style={{
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, jelajahi_gaya_bahasa: x })} style={{
                                 fontFamily: fonts.primary[400], fontSize: 12, paddingLeft: 10, paddingRight: 10, borderWidth: 1,
                                 borderRadius: 30, color: 'black', backgroundColor: 'white'
                             }} placeholder='Isi Jawaban' placeholderTextColor='gray' />
@@ -134,7 +134,7 @@ export default function JelajahiInput({ navigation, route }) {
                         <View>
                             <Text style={{ fontFamily: fonts.primary[400], fontSize: 12, }}> 4. Pesan Moral</Text>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, jelajahi_pesan_moral: x })} style={{
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, jelajahi_pesan_moral: x })} style={{
                                 fontFamily: fonts.primary[400], fontSize: 12, paddingLeft: 10, paddingRight: 10, borderWidth: 1,
                                 borderRadius: 30, color: 'black', backgroundColor: 'white'
                             }} placeholder='Isi Jawaban' placeholderTextColor='gray' />

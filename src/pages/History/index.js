@@ -182,14 +182,14 @@ export default function History({ navigation }) {
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
               Tujuan :{'\n'}
               Siswa dapat menulis puisi dengan memanfaatkan{'\n'}
-              <Text style={{ fontStyle: 'italic' }}>dolabololo.</Text>
+              <Text style={{ fontStyle: 'italic' }}><Text style={{ fontStyle: 'italic' }}>dolabololo</Text>.</Text>
             </JustifiedText>
           </View>
           <MyGap jarak={10} />
 
           <View>
             <Text style={{ fontFamily: fonts.primary[600], fontSize: 12, textAlign: 'center' }}>
-              Puisi Bermuatan <Text style={{ fontStyle: 'italic' }}>Dolabololo</Text>
+              Puisi Bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>
             </Text>
           </View>
 
@@ -199,7 +199,7 @@ export default function History({ navigation }) {
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
               Petunjuk : {'\n'}
               1. Tulislah nama kelompok dan anggota kelompok pada tempat yang disediakan. {'\n'}
-              2. Ambil kartu yang berisikan <Text style={{ fontStyle: "italic" }}>dolabololo</Text> yang telah disiapkan oleh guru. {'\n'}
+              2. Ambil kartu yang berisikan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah disiapkan oleh guru. {'\n'}
               3. Bekerjalah dengan teman kelompokmu untuk dapat menyelesaikan tugas dalam LKS ini. {'\n'}
             </JustifiedText>
           </View>
@@ -209,10 +209,10 @@ export default function History({ navigation }) {
           <View>
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
               Kegiatan:{'\n'}
-              Ikuti langkah-langkah berikut untuk dapat menulis puisi dengan memanfaatkan dolabololo.{'\n'}
+              Ikuti langkah-langkah berikut untuk dapat menulis puisi dengan memanfaatkan <Text style={{ fontStyle: 'italic' }}><Text style={{ fontStyle: 'italic' }}>dolabololo</Text>.</Text>{'\n'}
               {'\n'}
               1. Baca dan lisankanlah bersama teman kelompokmu bentuk <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dalam kartu yang telah disiapkan oleh guru.{'\n'}
-              2. Terjemahkanlah dolabololo dalam kartu tersebut ke dalam bahasa Indonesia. Tuliskanlah terjemahan tersebut ke dalam kotak 1 berikut.
+              2. Terjemahkanlah <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dalam kartu tersebut ke dalam bahasa Indonesia. Tuliskanlah terjemahan tersebut ke dalam kotak 1 berikut.
             </JustifiedText>
           </View>
 
@@ -222,7 +222,7 @@ export default function History({ navigation }) {
             <Isian label='Kotak 1' value={item.kotak1} />
             <MyGap jarak={10} />
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-              3. Tentukanlah tema yang terdapat dalam dolabololo yang telah diterjemahkan tersebut. Tulislah tema tersebut pada kotak 2 berikut.
+              3. Tentukanlah tema yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diterjemahkan tersebut. Tulislah tema tersebut pada kotak 2 berikut.
             </JustifiedText>
           </View>
 
@@ -232,7 +232,7 @@ export default function History({ navigation }) {
             <Isian label='Kotak 2' value={item.kotak2} />
             <MyGap jarak={10} />
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-              4. Tentukanlah gaya bahasa yang digunakan dalam dolabololo yang telah diterjemahkan tersebut. Tulislah bentuk gaya bahasa tersebut pada kotak berikut.
+              4. Tentukanlah gaya bahasa yang digunakan dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diterjemahkan tersebut. Tulislah bentuk gaya bahasa tersebut pada kotak berikut.
             </JustifiedText>
           </View>
 
@@ -243,7 +243,7 @@ export default function History({ navigation }) {
             <Isian label='Kotak 3' value={item.kotak3} />
             <MyGap jarak={10} />
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-              5. Tentukanlah nilai atau pesan moral yang terdapat dalam dolabololo yang telah diterjemahkan tersebut. Tulislah nilai atau pesan moral tersebut pada kotak 4 berikut.
+              5. Tentukanlah nilai atau pesan moral yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diterjemahkan tersebut. Tulislah nilai atau pesan moral tersebut pada kotak 4 berikut.
             </JustifiedText>
           </View>
 
@@ -259,7 +259,7 @@ export default function History({ navigation }) {
             <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Tantangan!</Text>
             <MyGap jarak={10} />
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-              Buatlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam dolabololo yang telah diidentifikasi sebelumnya. Ikutilah instruksi yang diberikan oleh guru dan tata cara yang telah disediakan dalam kotak berikut ini!
+              Buatlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diidentifikasi sebelumnya. Ikutilah instruksi yang diberikan oleh guru dan tata cara yang telah disediakan dalam kotak berikut ini!
             </JustifiedText>
           </View>
 
@@ -301,7 +301,7 @@ export default function History({ navigation }) {
             <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>3.Mari merakit puisi!</Text>
             <MyGap jarak={10} />
             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-              Rakitlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam dolabololo yang telah diidentifikasi sebelumnya dan ikutilah instruksi yang diberikan oleh guru. Gunakanlah kotak untuk merakit puisi bermuatan dolabololo yang terdapat pada halaman berikutnya.
+              Rakitlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diidentifikasi sebelumnya dan ikutilah instruksi yang diberikan oleh guru. Gunakanlah kotak untuk merakit puisi bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang terdapat pada halaman berikutnya.
             </JustifiedText>
           </View>
 
@@ -309,14 +309,14 @@ export default function History({ navigation }) {
 
           <View>
             <Text style={{ fontFamily: fonts.primary[600], fontSize: 12, textAlign: 'center' }}>Kotak Merakit Puisi yang Bermuatan{'\n'}
-              <Text style={{ fontStyle: "italic" }}>Dolabololo</Text>
+              <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>
             </Text>
 
             <MyGap jarak={20} />
 
             <View>
               <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12, fontStyle: "italic" }}>
-                Dolabololo :
+                <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> :
               </JustifiedText>
               <MyGap jarak={5} />
               <Isian label='' value={item.tantangan_3a} />

@@ -77,7 +77,7 @@ export default function Login({ navigation }) {
             <Text style={styles.subtitle}>Dalam Bahasa Ternate berarti “Rumahnya”</Text>
             <Text style={styles.title}>
               Mari Masuk ke Rumahnya Model{'\n'}Pembelajaran MPBD{'\n'}
-              (Menulis Puisi Berbasis <Text style={styles.italicText}>Dolabololo</Text>)
+              (Menulis Puisi Berbasis <Text style={styles.italicText}><Text style={{ fontStyle: 'italic' }}>dolabololo</Text></Text>)
             </Text>
             <View style={styles.inputContainer}>
               <TextInput

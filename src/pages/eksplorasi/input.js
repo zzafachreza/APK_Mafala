@@ -104,7 +104,7 @@ export default function EksplorasiInput({ navigation }) {
                     <View style={{ marginTop: 20 }}>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>Kelompok:</JustifiedText>
                         <MyGap jarak={5} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, eksplorasi_nama_kelompok: x })} style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, eksplorasi_nama_kelompok: x })} style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
                             placeholder='Isi Kelompok' placeholderTextColor='gray'
                         />
                     </View>
@@ -112,8 +112,8 @@ export default function EksplorasiInput({ navigation }) {
                     <View style={{ marginTop: 10 }}>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>Nama Anggota Kelompok:</JustifiedText>
                         <MyGap jarak={5} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, eksplorasi_anggota_kelompok: x })} style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
-                            placeholder='Isi Nama Anggota Kelompok' multiline placeholderTextColor='gray'
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, eksplorasi_anggota_kelompok: x })} style={{ borderWidth: 1, borderRadius: 10, backgroundColor: 'white', paddingLeft: 10, paddingRight: 10, color: 'black', fontSize: 12 }}
+                            placeholder='Isi Nama Anggota Kelompok' placeholderTextColor='gray'
                         />
                     </View>
                     <MyGap jarak={10} />
@@ -130,7 +130,7 @@ export default function EksplorasiInput({ navigation }) {
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             Tujuan :{'\n'}
                             Siswa dapat menulis puisi dengan memanfaatkan{'\n'}
-                            <Text style={{ fontStyle: 'italic' }}>dolabololo.</Text>
+                            <Text style={{ fontStyle: 'italic' }}><Text style={{ fontStyle: 'italic' }}>dolabololo</Text>.</Text>
                         </JustifiedText>
                     </View>
 
@@ -138,7 +138,7 @@ export default function EksplorasiInput({ navigation }) {
 
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12, textAlign: 'center' }}>
-                            Puisi Bermuatan <Text style={{ fontStyle: 'italic' }}>Dolabololo</Text>
+                            Puisi Bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>
                         </Text>
                     </View>
 
@@ -148,7 +148,7 @@ export default function EksplorasiInput({ navigation }) {
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             Petunjuk : {'\n'}
                             1. Tulislah nama kelompok dan anggota kelompok pada tempat yang disediakan. {'\n'}
-                            2. Ambil kartu yang berisikan <Text style={{ fontStyle: "italic" }}>dolabololo</Text> yang telah disiapkan oleh guru. {'\n'}
+                            2. Pilih nomor yang terdapat <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada halaman berikutnya {'\n'}
                             3. Bekerjalah dengan teman kelompokmu untuk dapat menyelesaikan tugas dalam LKS ini. {'\n'}
                         </JustifiedText>
                     </View>
@@ -158,10 +158,10 @@ export default function EksplorasiInput({ navigation }) {
                     <View>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             Kegiatan:{'\n'}
-                            Ikuti langkah-langkah berikut untuk dapat menulis puisi dengan memanfaatkan dolabololo.{'\n'}
+                            Ikuti langkah-langkah berikut untuk dapat menulis puisi dengan memanfaatkan <Text style={{ fontStyle: 'italic' }}><Text style={{ fontStyle: 'italic' }}>dolabololo</Text>.</Text>{'\n'}
                             {'\n'}
-                            1. Baca dan lisankanlah bersama teman kelompokmu bentuk <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dalam kartu yang telah disiapkan oleh guru.{'\n'}
-                            2. Terjemahkanlah dolabololo dalam kartu tersebut ke dalam bahasa Indonesia. Tuliskanlah terjemahan tersebut ke dalam kotak 1 berikut.
+                            1. Baca dan lisankan bersama teman kelompokmu bentuk <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah dipilih.{'\n'}
+                            2. Terjemahkan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah dipilih ke dalam bahasa Indonesia. Tuliskanlah terjemahan tersebut ke dalam kotak 1 berikut
                         </JustifiedText>
                     </View>
 
@@ -170,11 +170,11 @@ export default function EksplorasiInput({ navigation }) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 1</Text>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak1: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, kotak1: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Terjemahkan' placeholderTextColor='gray' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            3. Tentukanlah tema yang terdapat dalam dolabololo yang telah diterjemahkan tersebut. Tulislah tema tersebut pada kotak 2 berikut.
+                            3. Tentukanlah tema yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diterjemahkan tersebut. Tulislah tema tersebut pada kotak 2 berikut.
                         </JustifiedText>
                     </View>
 
@@ -183,11 +183,11 @@ export default function EksplorasiInput({ navigation }) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 2</Text>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak2: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, kotak2: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Tema' placeholderTextColor='gray' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            4. Tentukanlah gaya bahasa yang digunakan dalam dolabololo yang telah diterjemahkan tersebut. Tulislah bentuk gaya bahasa tersebut pada kotak berikut.
+                            4. Tentukanlah gaya bahasa yang digunakan dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diterjemahkan tersebut. Tulislah bentuk gaya bahasa tersebut pada kotak berikut.
                         </JustifiedText>
                     </View>
 
@@ -196,11 +196,11 @@ export default function EksplorasiInput({ navigation }) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 3</Text>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak3: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, kotak3: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Gaya Bahasa' placeholderTextColor='gray' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            5. Tentukanlah nilai atau pesan moral yang terdapat dalam dolabololo yang telah diterjemahkan tersebut. Tulislah nilai atau pesan moral tersebut pada kotak 4 berikut.
+                            5. Tentukanlah nilai atau pesan moral yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diterjemahkan tersebut. Tulislah nilai atau pesan moral tersebut pada kotak 4 berikut.
                         </JustifiedText>
                     </View>
 
@@ -209,7 +209,7 @@ export default function EksplorasiInput({ navigation }) {
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Kotak 4</Text>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, kotak4: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, kotak4: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, color: 'black', fontFamily: fonts.primary[400], fontSize: 12, borderRadius: 10, borderWidth: 1 }}
                             placeholder='Pesan' placeholderTextColor='gray' />
                     </View>
 
@@ -219,7 +219,7 @@ export default function EksplorasiInput({ navigation }) {
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>Tantangan!</Text>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            Buatlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam dolabololo yang telah diidentifikasi sebelumnya. Ikutilah instruksi yang diberikan oleh guru dan tata cara yang telah disediakan dalam kotak berikut ini!
+                            Buatlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diidentifikasi sebelumnya. Ikutilah instruksi yang diberikan oleh guru dan tata cara yang telah disediakan dalam kotak berikut ini!
                         </JustifiedText>
                     </View>
 
@@ -231,14 +231,14 @@ export default function EksplorasiInput({ navigation }) {
                             a. Isilah kotak dibawah ini dengan terjemahan {'\n'}<Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada kotak 1
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_1a: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_1a: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             b. Ciptakanlah sepenggal kalimat imajinatif yang memiliki bentuk dan jumlah larik seperti terjemahan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada kotak sebelumnya. Tulislah kalimat imajinatif tersebut pada kotak di bawah ini.
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_1b: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_1b: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                     </View>
 
@@ -250,14 +250,14 @@ export default function EksplorasiInput({ navigation }) {
                             a. Isilah kotak dibawah ini dengan tema <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada kotak 2.
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_2a: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_2a: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             b. Ciptakanlah sebuah judul yang menggambarkan tema yang terdapat pada kotak sebelumnya.
                         </JustifiedText>
                         <MyGap jarak={10} />
-                        <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_2b: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_2b: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, fontSize: 12, fontFamily: fonts.primary[400], color: "black", borderWidth: 1, borderRadius: 10 }}
                             placeholder='Isi jawaban' />
                     </View>
 
@@ -267,7 +267,7 @@ export default function EksplorasiInput({ navigation }) {
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>3.Mari merakit puisi!</Text>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            Rakitlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam dolabololo yang telah diidentifikasi sebelumnya dan ikutilah instruksi yang diberikan oleh guru. Gunakanlah kotak untuk merakit puisi bermuatan dolabololo yang terdapat pada halaman berikutnya.
+                            Rakitlah sebuah puisi dengan memanfaatkan unsur –unsur pembangun yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diidentifikasi sebelumnya dan ikutilah instruksi yang diberikan oleh guru. Gunakanlah kotak untuk merakit puisi bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang terdapat pada halaman berikutnya.
                         </JustifiedText>
                     </View>
 
@@ -275,17 +275,17 @@ export default function EksplorasiInput({ navigation }) {
 
                     <View>
                         <Text style={{ fontFamily: fonts.primary[600], fontSize: 12, textAlign: 'center' }}>Kotak Merakit Puisi yang Bermuatan{'\n'}
-                            <Text style={{ fontStyle: "italic" }}>Dolabololo</Text>
+                            <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>
                         </Text>
 
                         <MyGap jarak={20} />
 
                         <View>
                             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12, fontStyle: "italic" }}>
-                                Dolabololo :
+                                <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3a: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3a: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -296,7 +296,7 @@ export default function EksplorasiInput({ navigation }) {
                                 Tema :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3b: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3b: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -307,7 +307,7 @@ export default function EksplorasiInput({ navigation }) {
                                 Judul :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3c: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3c: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -318,7 +318,7 @@ export default function EksplorasiInput({ navigation }) {
                                 Kalimat Imajinatif :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3d: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3d: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -329,7 +329,7 @@ export default function EksplorasiInput({ navigation }) {
                                 Gaya Bahasa :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3e: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3e: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -340,7 +340,7 @@ export default function EksplorasiInput({ navigation }) {
                                 Kalimat Imajinatif :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3f: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3f: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -351,7 +351,7 @@ export default function EksplorasiInput({ navigation }) {
                                 Pesan :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3g: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3g: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -362,7 +362,7 @@ export default function EksplorasiInput({ navigation }) {
                                 Kalimat Imajinatif :
                             </JustifiedText>
                             <MyGap jarak={5} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_3h: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_3h: x })} style={{ backgroundColor: 'white', fontSize: 12, fontFamily: fonts.primary[400], paddingRight: 10, paddingLeft: 10, borderRadius: 10, borderWidth: 1 }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
 
@@ -381,7 +381,7 @@ export default function EksplorasiInput({ navigation }) {
                         <View>
                             <Text style={{ fontSize: 12, fontFamily: fonts.primary[600] }}>Puisi:</Text>
                             <MyGap jarak={10} />
-                            <TextInput onChangeText={x => setKirim({ ...kirim, tantangan_4: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, borderWidth: 1, borderRadius: 10, fontSize: 12, fontFamily: fonts.primary[400] }}
+                            <TextInput multiline onChangeText={x => setKirim({ ...kirim, tantangan_4: x })} style={{ backgroundColor: 'white', paddingRight: 10, paddingLeft: 10, borderWidth: 1, borderRadius: 10, fontSize: 12, fontFamily: fonts.primary[400] }}
                                 placeholder='Isi jawaban' placeholderTextColor='gray' />
                         </View>
                     </View>

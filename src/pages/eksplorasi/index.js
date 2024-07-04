@@ -4,7 +4,7 @@ import { MyGap, MyHeader } from '../../components';
 import { MyDimensi, colors, fonts } from '../../utils';
 import { Icon } from 'react-native-elements';
 
-export default function Eksplorasi({navigation}) {
+export default function Eksplorasi({ navigation }) {
     const backPage = () => {
         navigation.goBack();
     };
@@ -37,7 +37,7 @@ export default function Eksplorasi({navigation}) {
                 <View style={{ padding: 10 }}>
                     <View style={{ padding: 10 }}>
                         <JustifiedText style={{ fontFamily: fonts.primary[600] }}>
-                            Ayo... Menciptakan sebuah puisi dengan mengadaptasikan unsur yang terdapat dalam dolabololo
+                            Ayo... Menciptakan sebuah puisi dengan mengadaptasikan unsur yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>
                         </JustifiedText>
                         <MyGap jarak={20} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
@@ -46,8 +46,8 @@ export default function Eksplorasi({navigation}) {
                         <MyGap jarak={5} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
                             1. Langkah pertama adalah belajar Menciptakan imajinasi.{'\n'}
-                            • Siswa diajak oleh guru untuk belajar berimajinasi dengan tidak melihat dolabololo sebagai ungkapan tradisional yang kuno, tetapi sebagai sebuah ungkapan syair yang indah dan memiliki unsur pembangun yang bisa dimanfaatkan dalam menulis sebuah puisi.{'\n'}
-                            • Guru memberi contoh kepada siswa, melengkapi sepenggal dolabololo dengan menyusun frasa dan kalimat imajinatif, misalnya sepenggal dolabololo berikut ini:
+                            • Siswa diajak oleh guru untuk belajar berimajinasi dengan tidak melihat <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> sebagai ungkapan tradisional yang kuno, tetapi sebagai sebuah ungkapan syair yang indah dan memiliki unsur pembangun yang bisa dimanfaatkan dalam menulis sebuah puisi.{'\n'}
+                            • Guru memberi contoh kepada siswa, melengkapi sepenggal <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dengan menyusun frasa dan kalimat imajinatif, misalnya sepenggal <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> berikut ini:
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <Image source={require('../../assets/eksplorasiteks.png')} style={{
@@ -55,11 +55,11 @@ export default function Eksplorasi({navigation}) {
                         }} />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            2. Langkah kedua setelah Setelah menciptakan imajinasi adalah <Text style={{ fontWeight: 'bold' }}>membangun ide atau gagasan.</Text> Guru mengajak siswa menjadikan Tema yang telah ditemukan dalam dolabololo pada kegiatan sebelumnya, sebagai titik fokus siswa menumpahkan kosa kata imajinatif mereka. Terutama judul yang diciptakan dari puisi tersebut haruslah menggambarkan tema dari dolabololo tersebut.
+                            2. Langkah kedua setelah Setelah menciptakan imajinasi adalah <Text style={{ fontWeight: 'bold' }}>membangun ide atau gagasan.</Text> Guru mengajak siswa menjadikan Tema yang telah ditemukan dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada kegiatan sebelumnya, sebagai titik fokus siswa menumpahkan kosa kata imajinatif mereka. Terutama judul yang diciptakan dari puisi tersebut haruslah menggambarkan tema dari <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> tersebut.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            Contoh proses membangun ide atau gagasan dengan memanfaatkan dolabololo:
+                            Contoh proses membangun ide atau gagasan dengan memanfaatkan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>:
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <Image source={require('../../assets/eksplorasiteksdua.png')} style={{
@@ -67,7 +67,7 @@ export default function Eksplorasi({navigation}) {
                         }} />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            3. Langkah ketiga adalah siswa <Text style={{ fontWeight: 'bold' }}>merakit struktur puisi</Text> (Unsur-unsur pembangun dolabololo yang ditemukan dalam kegiatan sebelumnya akan disusun dan diadaptasikan ke dalam sebuah struktur pembangun puisi yang telah di tentukan judul dari tema dolabololo dalam kegiatan sebelumnya).{'\n'}
+                            3. Langkah ketiga adalah siswa <Text style={{ fontWeight: 'bold' }}>merakit struktur puisi</Text> (Unsur-unsur pembangun <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang ditemukan dalam kegiatan sebelumnya akan disusun dan diadaptasikan ke dalam sebuah struktur pembangun puisi yang telah di tentukan judul dari tema <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dalam kegiatan sebelumnya).{'\n'}
                             • Siswa menuliskan kembali ide atau tema serta judul yang telah ditentukan pada langkah sebelumnya sebelumnya.
                         </JustifiedText>
                         <MyGap jarak={10} />
@@ -76,7 +76,7 @@ export default function Eksplorasi({navigation}) {
                         }} />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            • Siswa menuliskan lagi kalimat imajinatif, sambungan dari dolabololo yang telah ditentukan pada langkah belajar berimajinasi sebelumnya.
+                            • Siswa menuliskan lagi kalimat imajinatif, sambungan dari <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah ditentukan pada langkah belajar berimajinasi sebelumnya.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <Image source={require('../../assets/eksplorasiteksempat.png')} style={{
@@ -84,7 +84,7 @@ export default function Eksplorasi({navigation}) {
                         }} />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            • Selanjutnya siswa berimajinasi kembali menciptakan frase dan kalimat imajinatif yang memiliki gaya bahasa. Gaya bahasa yang dikembangkan bisa sama dengan gaya bahasa yang terdapat dalam dolabololo ataupun bukan.
+                            • Selanjutnya siswa berimajinasi kembali menciptakan frase dan kalimat imajinatif yang memiliki gaya bahasa. Gaya bahasa yang dikembangkan bisa sama dengan gaya bahasa yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> ataupun bukan.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <Image source={require('../../assets/eksplorasitekslima.png')} style={{
@@ -92,7 +92,7 @@ export default function Eksplorasi({navigation}) {
                         }} />
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            • Siswa menciptakan kalimat imajinatif yang memiliki pesan yang sama dengan dolabololo serta memiliki keterpaduan diksi dengan kalimat imajinatif yang ditentukan sebelumnya.
+                            • Siswa menciptakan kalimat imajinatif yang memiliki pesan yang sama dengan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> serta memiliki keterpaduan diksi dengan kalimat imajinatif yang ditentukan sebelumnya.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <Image source={require('../../assets/eksplorasiteksenam.png')} style={{
@@ -114,11 +114,11 @@ export default function Eksplorasi({navigation}) {
                             • Siswa menyusun kembali bangunan stuktur puisi yang telah dikerjakan dalam kegitan sebelumnya.
                         </JustifiedText>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            • Guru memberikan pemahaman kepada siswa bahwa puisi yang utuh bukan berarti harus panjang dan lebar, puisi yang pendek juga belum tentu utuh dan padu. Akan tetapi puisi yang utuh adalah puisi yang tuntas, yakni tidak menyisahkan batahan dan pertanyaan. Dengan demikian, dalam model pembelajaran bermuatan dolabololo ini tidak ada ketetapan jumlah larik dan bait dalam sebuah puisi, melainkan siswa sendirilah yang menentukan jumlah larik dan baitnya.
+                            • Guru memberikan pemahaman kepada siswa bahwa puisi yang utuh bukan berarti harus panjang dan lebar, puisi yang pendek juga belum tentu utuh dan padu. Akan tetapi puisi yang utuh adalah puisi yang tuntas, yakni tidak menyisahkan batahan dan pertanyaan. Dengan demikian, dalam model pembelajaran bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> ini tidak ada ketetapan jumlah larik dan bait dalam sebuah puisi, melainkan siswa sendirilah yang menentukan jumlah larik dan baitnya.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 11 }}>
-                            Berikut contoh puisi bermuatan dolabololo yang telah selesai di susun.
+                            Berikut contoh puisi bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah selesai di susun.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <Image source={require('../../assets/eksplorasiteksdelapan.png')} style={{

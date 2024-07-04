@@ -4,7 +4,7 @@ import { MyGap, MyHeader } from '../../components';
 import { MyDimensi, colors, fonts } from '../../utils';
 import { Icon } from 'react-native-elements';
 
-export default function Jelajahi({navigation}) {
+export default function Jelajahi({ navigation }) {
     const backPage = () => {
         navigation.goBack();
     };
@@ -37,7 +37,7 @@ export default function Jelajahi({navigation}) {
                 <View style={{ padding: 10 }}>
                     <View style={{ padding: 10 }}>
                         <JustifiedText style={{ fontFamily: fonts.primary[600], fontSize: 12 }}>
-                            Ayo... kita jelajahi…. mencari dan menemukan unsur-unsur konstruksi puisi yang ada dalam bentuk <Text style={{ fontStyle: "italic" }}>dolabololo.</Text>
+                            Ayo... kita jelajahi…. mencari dan menemukan unsur-unsur konstruksi puisi yang ada dalam bentuk <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>
                         </JustifiedText>
                     </View>
 
@@ -51,12 +51,12 @@ export default function Jelajahi({navigation}) {
                             1. Bersama guru, siswa membentuk kelompok kecil yang berjumlah 2 orang.
                         </JustifiedText>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            2. Masing-masing siswa bisa membuka kartu yang berisikan dolabololo dalam kotak dibagian pojok atas!
+                            2. Masing-masing siswa bisa membuka kartu yang berisikan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> dalam kotak dibagian pojok atas!
                         </JustifiedText>
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             3. Masing-masing anggota kelompok diberikan waktu untuk :{'\n'}
                             • saling melisankan bentuk dolabolo yang terdapat dalam kartu yang telah mereka miliki masing-masing.{'\n'}
-                            • mengartikan bentuk dolabololo yang terdapat dalam kartu ke dalam bahasa Indonesia.
+                            • mengartikan bentuk <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang terdapat dalam kartu ke dalam bahasa Indonesia.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
@@ -67,7 +67,7 @@ export default function Jelajahi({navigation}) {
                         }} />
                         <MyGap jarak={20} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
-                            • berdikusi menemukan unsur pembangun puisi( tema, gaya bahasa, serta pesan moral) yang terdapat dalam dolabololo yang telah diartikan dalam bahasan Indonesia sebelumya.
+                            • berdikusi menemukan unsur pembangun puisi( tema, gaya bahasa, serta pesan moral) yang terdapat dalam <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang telah diartikan dalam bahasan Indonesia sebelumya.
                         </JustifiedText>
                         <MyGap jarak={10} />
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>

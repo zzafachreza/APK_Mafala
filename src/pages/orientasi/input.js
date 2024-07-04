@@ -102,7 +102,7 @@ export default function OrientasiInput({ navigation }) {
                     <MyGap jarak={10} />
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>1. Diksi</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_diksi: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_diksi: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -113,7 +113,7 @@ export default function OrientasiInput({ navigation }) {
                     <MyGap jarak={0} />
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>2. Imaji</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_imaji: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_imaji: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -124,7 +124,7 @@ export default function OrientasiInput({ navigation }) {
                     <MyGap jarak={0} />
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>3. Rima</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_rima: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_rima: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -135,7 +135,7 @@ export default function OrientasiInput({ navigation }) {
                     <MyGap jarak={0} />
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>4. Tipografi</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_tipografi: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_tipografi: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -146,7 +146,7 @@ export default function OrientasiInput({ navigation }) {
                     <MyGap jarak={0} />
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>5. Gaya Bahasa</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_gaya_bahasa: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_gaya_bahasa: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -158,7 +158,7 @@ export default function OrientasiInput({ navigation }) {
                     <MyGap jarak={10} />
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>1. Tema</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_tema: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_tema: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -167,7 +167,7 @@ export default function OrientasiInput({ navigation }) {
                     </View>
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>2. Rasa</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_rasa: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_rasa: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -176,7 +176,7 @@ export default function OrientasiInput({ navigation }) {
                     </View>
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>3. Nada</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_nada: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_nada: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}
@@ -185,7 +185,7 @@ export default function OrientasiInput({ navigation }) {
                     </View>
                     <View style={{ padding: 10 }}>
                         <Text style={{ fontFamily: fonts.primary[400], }}>4. Amanat</Text>
-                        <TextInput onChangeText={x => setKirim({ ...kirim, orientasi_amanat: x })} style={{
+                        <TextInput multiline onChangeText={x => setKirim({ ...kirim, orientasi_amanat: x })} style={{
                             backgroundColor: 'white', borderWidth: 0.5, borderRadius: 30,
                             paddingLeft: 10, paddingRight: 10, fontFamily: fonts.primary[400], fontSize: 12, top: 3
                         }}

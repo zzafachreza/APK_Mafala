@@ -4,7 +4,7 @@ import { MyGap, MyHeader } from '../../components';
 import { MyDimensi, colors, fonts } from '../../utils';
 import { Icon } from 'react-native-elements';
 
-export default function Komunikasi({navigation}) {
+export default function Komunikasi({ navigation }) {
     const backPage = () => {
         navigation.goBack();
     };
@@ -38,7 +38,7 @@ export default function Komunikasi({navigation}) {
                     <View style={{ padding: 10 }}>
                         <View>
                             <JustifiedText style={{ fontSize: 12, fontFamily: fonts.primary[600], textAlign: 'left' }}>
-                                Ayoo… Bacakan hasil karya berupa puisi yang bermuatan dolabololo di depan kelas!
+                                Ayoo… Bacakan hasil karya berupa puisi yang bermuatan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> di depan kelas!
                             </JustifiedText>
                             <MyGap jarak={10} />
                             <JustifiedText style={{ fontSize: 12, fontFamily: fonts.primary[400] }}>
@@ -47,8 +47,8 @@ export default function Komunikasi({navigation}) {
                             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                                 1. Guru memberikan kesempatan kepada beberapa kelompok untuk membacakan hasil karyanya di depan kelas dengan cara:{'\n'}
                                 • Kelompok yang sudah siap untuk membacakan hasil karya mereka di depan kelas akan melontarkan yel-yel penyemangat kelompoknya, sebagai tanda bahwa kelompok tersebut siap untuk membacakan hasil karya mereka.{'\n'}
-                                • Sebelum anggota kelompok membacakan hasil karya mereka, masing-masing dari mereka harus melisankan terlebih dahulu dolabololo yang terdapat dalam kartu materi mereka, menjelaskan arti serta unsur-unsur pembangun dolabololo yang mereka temui pada saat berdiskusi.{'\n'}
-                                • Setelah melisankan dolabololo serta menjelaskan arti dan unsur pembangun dolabololo, masing-masing anggota kelompok kemudian membaca{'\n'}
+                                • Sebelum anggota kelompok membacakan hasil karya mereka, masing-masing dari mereka harus melisankan terlebih dahulu <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang terdapat dalam kartu materi mereka, menjelaskan arti serta unsur-unsur pembangun <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> yang mereka temui pada saat berdiskusi.{'\n'}
+                                • Setelah melisankan <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> serta menjelaskan arti dan unsur pembangun <Text style={{ fontStyle: 'italic' }}>dolabololo</Text>, masing-masing anggota kelompok kemudian membaca{'\n'}
                             </JustifiedText>
                             <MyGap jarak={10} />
                             <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
