@@ -148,7 +148,7 @@ export default function EksplorasiInput({ navigation }) {
                         <JustifiedText style={{ fontFamily: fonts.primary[400], fontSize: 12 }}>
                             Petunjuk : {'\n'}
                             1. Tulislah nama kelompok dan anggota kelompok pada tempat yang disediakan. {'\n'}
-                            2. Pilih nomor yang terdapat <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada halaman berikutnya {'\n'}
+                            2. Pilih nomor yang terdapat <Text style={{ fontStyle: 'italic' }}>dolabololo</Text> pada halaman sebelumnya{'\n'}
                             3. Bekerjalah dengan teman kelompokmu untuk dapat menyelesaikan tugas dalam LKS ini. {'\n'}
                         </JustifiedText>
                     </View>
